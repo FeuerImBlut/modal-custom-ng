@@ -1,0 +1,11 @@
+<button (click)="showModal()">Show Modal</button>
+<p>The message from the dialog is:</p>
+<p>{{ message }}</p>
+
+<app-custom-modal>
+  <div body>
+    <app-example-component (onModalClosed)="modalClosed($event)" #modalBody>
+    </app-example-component>
+  </div>
+  <div footer class="custom-footer"><p >Custom footer</p></div>
+</app-custom-modal>

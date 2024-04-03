@@ -1,0 +1,22 @@
+:host {
+  display: block;
+  padding: 100px;
+}
+
+:host ::ng-deep {
+  button {
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .custom-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    background-color: rgba(238, 130, 238, 0.3);
+    font-family: 'Courier New', Courier, monospace;
+  }
+}

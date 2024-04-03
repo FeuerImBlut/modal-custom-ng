@@ -1,0 +1,22 @@
+<div *ngIf="isModalShown" class="modal-overlay">
+  <section class="modal-content" #modal>
+    <div class="header-wrapper">
+      <div #header>
+        <ng-content select="[header]"></ng-content>
+      </div>
+      <div class="default-header" *ngIf="!header.hasChildNodes()">
+        <span class="header-title">Custom header</span>
+        <button class="modal-close-button" (click)="closeModal()">Close</button>
+      </div>
+    </div>
+    <div class="body-wrapper">
+      <ng-content select="[body]"></ng-content>
+    </div>
+    <div class="footer-wrapper">
+      <div #footer>
+        <ng-content select="[footer]"></ng-content>
+      </div>
+      <div *ngIf="!footer.hasChildNodes()">Default footer</div>
+    </div>
+  </section>
+</div>
